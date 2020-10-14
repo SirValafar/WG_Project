@@ -11,6 +11,10 @@ namespace SG
         int horizontal;
         public bool canRotate;
 
+        private void Start() {
+            anim = GetComponent<Animator>();
+            
+        }
         public void Initialize()
         {
             anim = GetComponent<Animator>();
@@ -53,7 +57,7 @@ namespace SG
             }
             else if(horizontalMovement > 0.55f)
             {
-                h = 1;
+                h = 1f;
             }
             else if (horizontalMovement < 0 && horizontalMovement > -0.55f)
             {
