@@ -6,7 +6,7 @@
             "id": "ce398353-1877-498c-9852-cb57cf91dbf5",
             "actions": [
                 {
-                    "name": "Movent",
+                    "name": "Movement",
                     "type": "PassThrough",
                     "id": "3d96acd9-e8c0-4b4d-a21e-729dfd6e3942",
                     "expectedControlType": "Vector2",
@@ -14,10 +14,10 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Camara",
-                    "type": "Button",
+                    "name": "Camera",
+                    "type": "PassThrough",
                     "id": "93f7c917-d419-47e0-aead-9fd213241704",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
                 }
@@ -30,7 +30,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movent",
+                    "action": "Movement",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -41,7 +41,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movent",
+                    "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -52,7 +52,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movent",
+                    "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -63,7 +63,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movent",
+                    "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -74,7 +74,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movent",
+                    "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -85,7 +85,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Camara",
+                    "action": "Camera",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -96,7 +96,7 @@
                     "interactions": "",
                     "processors": "NormalizeVector2",
                     "groups": "",
-                    "action": "Camara",
+                    "action": "Camera",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
