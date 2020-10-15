@@ -12,9 +12,7 @@ namespace SG{
         private Vector3 cameraTransformPosition;
         private LayerMask ignoreLayers;
         private Vector3 cameraFollowVelocity = Vector3.zero;
-
         public static CameraHandler singleton;
-
         public float lookSpeed = 0.1f;
         public float followSpeed = 0.1f;
         public float pivotSpeed = 0.03f;
@@ -33,12 +31,12 @@ namespace SG{
             myTransform = transform;
             defaultPosition = cameraTransform.localPosition.z;
             ignoreLayers = ~(1 << 8 | 1 << 9 | 1 << 10);
+
         }
 
         public void FollowTarget(float delta){
             Vector3 targetPosition = Vector3.SmoothDamp(myTransform.position, targetTransform.position, ref cameraFollowVelocity, delta / followSpeed);
             myTransform.position = targetPosition;
-
             HandleCameraCollision(delta);
         }
 
@@ -56,8 +54,7 @@ namespace SG{
             rotation.x = pivotAngle;
 
             targetRotation = Quaternion.Euler(rotation);
-            cameraTransform.localRotation = targetRotation;
-
+            cameraPivotTransform.localRotation = targetRotation;
         }
 
         private void HandleCameraCollision(float delta){
@@ -70,6 +67,7 @@ namespace SG{
                 (cameraPivotTransform.position, cameraSphereRadius, direction, out hit, Mathf.Abs(targetPosition),
                 ignoreLayers))
             {
+                Debug.Log("fosd");
                 float dis = Vector3.Distance(cameraPivotTransform.position, hit.point);
                 targetPosition = -(dis - cameraCollisionOffSet);
             }

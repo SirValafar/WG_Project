@@ -839,7 +839,7 @@ GameObject:
   m_Component:
   - component: {fileID: 214665652}
   - component: {fileID: 214665651}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Camera Holder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -862,10 +862,13 @@ MonoBehaviour:
   cameraTransform: {fileID: 506033406}
   cameraPivotTransform: {fileID: 1195664386}
   lookSpeed: 0.1
-  followSpeed: 0.1
+  followSpeed: 0.5
   pivotSpeed: 0.03
   mininumPivot: -35
   maxinumPivot: 35
+  cameraSphereRadius: 0.2
+  cameraCollisionOffSet: 0.2
+  minimunCollisionOffset: 0.2
 --- !u!4 &214665652
 Transform:
   m_ObjectHideFlags: 0
@@ -874,7 +877,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 214665650}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.42, y: 2.27, z: -2.15}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1195664386}
@@ -2050,7 +2053,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 506033403}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.42, y: -0.91999996, z: 0.1500001}
+  m_LocalPosition: {x: 0, y: 2, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1195664386}
@@ -4075,7 +4078,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1195664386}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Camera Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5630,7 +5633,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1582781630
 MonoBehaviour:
   m_ObjectHideFlags: 0
