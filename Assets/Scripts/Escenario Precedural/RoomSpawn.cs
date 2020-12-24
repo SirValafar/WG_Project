@@ -18,7 +18,7 @@ private RoomTemplate Template;
 
     private void Start() {
         Template = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplate>();
-        Invoke("Spawn", 0.1f);
+        Invoke("Spawn", 0.5f);
     }
 
     // Update is called once per frame
